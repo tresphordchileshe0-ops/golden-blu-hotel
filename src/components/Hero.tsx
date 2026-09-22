@@ -2,9 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { hotel, images } from '../data/hotel';
 
-const whatsappLink =
-  'https://wa.me/260978534205?text=Hello%20Golden%20Blu%20Hotel%2C%20I%20would%20like%20to%20ask%20about%20availability.';
-
 export function Hero() {
   return (
     <section
@@ -38,23 +35,12 @@ export function Hero() {
             {hotel.tagline}
           </p>
 
-          <div className="mt-11 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <a
-              href={whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gold px-10 py-4 text-[11px] font-semibold uppercase tracking-overline text-ink transition-colors duration-200 ease-refined hover:bg-gold-light"
-            >
-              WhatsApp us
-            </a>
-
-            <a
-              href="#visitor-info"
-              className="inline-flex items-center justify-center rounded-full border border-cream/40 px-10 py-4 text-[11px] font-semibold uppercase tracking-overline text-cream transition-colors duration-200 ease-refined hover:border-gold-light hover:text-gold-light"
-            >
-              Visitor information
-            </a>
-          </div>
+          <a
+            href="#visitor-info"
+            className="mt-11 inline-flex items-center rounded-full bg-gold px-10 py-4 text-[11px] font-semibold uppercase tracking-overline text-ink transition-colors duration-200 ease-refined hover:bg-gold-light"
+          >
+            Explore
+          </a>
         </motion.div>
       </div>
     </section>
