@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   FacebookIcon,
-  MessageCircleIcon,
+  InstagramIcon,
   PhoneIcon,
   MapPinIcon,
 } from 'lucide-react';
@@ -14,9 +14,9 @@ const social = [
     href: 'https://www.facebook.com/share/1EDPLXT43D/?mibextid=wwXIfr',
   },
   {
-    label: 'WhatsApp',
-    icon: MessageCircleIcon,
-    href: 'https://wa.me/260978534205',
+    label: 'Instagram',
+    icon: InstagramIcon,
+    href: '#top',
   },
 ];
 
@@ -110,8 +110,12 @@ export function Footer() {
                 <li key={label}>
                   <a
                     href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={href.startsWith('http') ? '_blank' : undefined}
+                    rel={
+                      href.startsWith('http')
+                        ? 'noopener noreferrer'
+                        : undefined
+                    }
                     aria-label={`Visit Golden Blu Hotel on ${label}`}
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream/70 transition-colors duration-200 ease-refined hover:border-gold-light hover:text-gold-light"
                   >
@@ -126,7 +130,7 @@ export function Footer() {
             </ul>
 
             <p className="mt-4 text-[12px] font-light text-cream/40">
-              Connect with us on Facebook or WhatsApp.
+              Social profiles coming soon.
             </p>
           </div>
         </div>
