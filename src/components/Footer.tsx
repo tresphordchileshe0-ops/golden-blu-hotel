@@ -52,10 +52,12 @@ export function Footer() {
                 />
 
                 <a
-                  href={`tel:${hotel.phone.replace(/\s/g, '')}`}
+                  href="https://wa.me/260978534205"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition-colors duration-200 ease-refined hover:text-gold-light"
                 >
-                  {hotel.phone}
+                  +260 97 8534205
                 </a>
               </li>
 
