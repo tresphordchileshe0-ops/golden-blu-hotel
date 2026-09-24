@@ -34,7 +34,14 @@ export function Footer() {
         >
           <div>
             <div className="flex items-baseline gap-2">
-              <span className="font-display text-2xl">Golden</span>
+              <span className="font-display text-2xl text-cream/75">
+                The
+              </span>
+
+              <span className="font-display text-2xl text-cream">
+                Golden
+              </span>
+
               <span className="font-display text-2xl italic text-gold-light">
                 Blu
               </span>
@@ -125,7 +132,7 @@ export function Footer() {
                         ? 'noopener noreferrer'
                         : undefined
                     }
-                    aria-label={`Visit Golden Blu Hotel on ${label}`}
+                    aria-label={`Visit The Golden Blu Hotel on ${label}`}
                     className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-cream/70 transition-colors duration-200 ease-refined hover:border-gold-light hover:text-gold-light"
                   >
                     <Icon
