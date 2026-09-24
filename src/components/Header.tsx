@@ -55,7 +55,12 @@ export function Header() {
           whileHover={{ y: -1 }}
           transition={{ duration: 0.2 }}
           className="flex items-baseline gap-2 whitespace-nowrap"
+          aria-label="The Golden Blu Hotel home"
         >
+          <span className="font-display text-xl text-cream/75 sm:text-2xl">
+            The
+          </span>
+
           <span className="font-display text-xl text-cream sm:text-2xl">
             Golden
           </span>
