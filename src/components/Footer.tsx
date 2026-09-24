@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import {
   FacebookIcon,
   InstagramIcon,
@@ -24,7 +25,13 @@ export function Footer() {
   return (
     <footer className="w-full bg-ink text-cream">
       <div className="mx-auto max-w-[1240px] px-6 py-20 lg:px-10">
-        <div className="grid grid-cols-1 gap-12 border-b border-white/10 pb-14 sm:grid-cols-2 lg:grid-cols-4">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
+          className="grid grid-cols-1 gap-12 border-b border-white/10 pb-14 sm:grid-cols-2 lg:grid-cols-4"
+        >
           <div>
             <div className="flex items-baseline gap-2">
               <span className="font-display text-2xl">Golden</span>
@@ -135,9 +142,19 @@ export function Footer() {
               Social profiles coming soon.
             </p>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-3 pt-8 text-[12px] font-light text-cream/45 sm:flex-row sm:items-center sm:justify-between">
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{
+            duration: 0.7,
+            delay: 0.15,
+            ease: [0.23, 1, 0.32, 1],
+          }}
+          className="flex flex-col gap-3 pt-8 text-[12px] font-light text-cream/45 sm:flex-row sm:items-center sm:justify-between"
+        >
           <p>
             &copy; {new Date().getFullYear()} {hotel.name}. All rights
             reserved.
@@ -146,7 +163,7 @@ export function Footer() {
           <p>
             Rated {hotel.rating} from {hotel.reviewCount} guest reviews.
           </p>
-        </div>
+        </motion.div>
       </div>
     </footer>
   );
